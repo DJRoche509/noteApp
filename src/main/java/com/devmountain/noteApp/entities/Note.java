@@ -4,6 +4,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "Notes")
+/*  The following 3 lines simplifies the class without the need of creating Constructors, getters, & setters
+  @Data
+  @AllArgsConstructor
+  @NoArgsConstructor
+ */
 public class Note {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
