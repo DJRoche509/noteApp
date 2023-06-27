@@ -1,11 +1,11 @@
 package com.devmountain.noteApp.entities;
 
+import com.devmountain.noteApp.dtos.NoteDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import com.devmountain.noteApp.entities.User;
 import javax.persistence.*;
 
 @Entity
@@ -26,6 +26,11 @@ public class Note {
     @JsonBackReference
     private User user;
 
+    public Note(NoteDto noteDto){
+        if (noteDto.getBody() != null){
+            this.body = noteDto.getBody();
+        }
+    }
 //    public Note(Long id, String body) {
 //        this.id = id;
 //        this.body = body;
