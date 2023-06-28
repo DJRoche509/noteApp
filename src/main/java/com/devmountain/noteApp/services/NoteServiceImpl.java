@@ -39,7 +39,7 @@ public class NoteServiceImpl implements NoteService {
 
     @Override
     @Transactional
-    public void updateNoteByUd(NoteDto noteDto){
+    public void updateNoteById(NoteDto noteDto){
         Optional<Note> noteOptional = noteRepository.findById(noteDto.getId());
         noteOptional.ifPresent( note -> {
             note.setBody(noteDto.getBody());
