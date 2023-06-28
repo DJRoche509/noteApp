@@ -32,7 +32,7 @@ public class NoteController {
 
     @PutMapping
     public void updateNote(@RequestBody NoteDto noteDto){
-        noteService.updateNoteByUd(noteDto);
+        noteService.updateNoteById(noteDto);
     }
 
     @GetMapping("/{noteId}")
