@@ -14,7 +14,7 @@ public interface NoteService {
     void deleteNoteById(Long noteId);
 
     @Transactional
-    void updateNoteByUd(NoteDto noteDto);
+    void updateNoteById(NoteDto noteDto);
 
     List<NoteDto> getAllNotesByUserId(Long userId);
 
